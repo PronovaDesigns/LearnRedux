@@ -2,10 +2,12 @@ var redux = require('redux');
 
 console.log('Starting Redux example');
 
-// Reducer requires default state and to return state.
-var reducer = (state = {name: 'Anonymous'}, action) => {
-  // state = state || {name: 'Anonymous'}; // ES5 way of creating default state.
-
+var stateDefault = {
+    searchText: '',
+    showCompleted: false,
+    todos: []
+}
+var reducer = (state = {stateDefault}, action) => {
   return state;
 };
 
