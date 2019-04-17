@@ -16,9 +16,8 @@ var unsubscribe = store.subscribe(() => {
   } else if (state.map.url) {
     document.getElementById('app').innerHTML = '<a href="' + state.map.url +'" target="_blank">View Your Location</a>'
   }
-
 });
-// unsubscribe();
+// unsubscribe(); // Used for debugging
 
 var currentState = store.getState();
 console.log('currentState', currentState);
@@ -26,7 +25,7 @@ console.log('currentState', currentState);
 store.dispatch(actions.fetchLocation());
 
 // Create action dispatch before writing corresponding reducer code.
-// You will have a more concrete idea of the data you're dealing with and how you want to change it.
+// You will have a more concrete idea of the data you're dealing with and how you want to adjust it.
 
 store.dispatch(actions.changeName('Chris'));
 

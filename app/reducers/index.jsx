@@ -1,4 +1,3 @@
-
 export var nameReducer = (state = 'Anonymous', action) => {
   switch (action.type) {
     case 'CHANGE_NAME':
